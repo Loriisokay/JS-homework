@@ -120,7 +120,37 @@ if (digit > 0) {
 
 // Task 1. 
 
+let odd = [];
+for (let i = 1; i < 99; i += 2) {
+    odd.push(i);
+}
 
+console.log(odd);
+
+// Task 2.
+
+let even = [];
+for (let i = 2; i < 21; i += 2) {
+    even.push(i);
+}
+
+console.log(even);
+
+// Task 3. 
+
+let even = [];
+for (let i = 2; i < 21; i += 2) {
+    even.push(i);
+}
+
+for (let i = 0; i < 1; i++) {
+    for (let j = 1; j < even.length; j++) {
+        even[i] = even[i] + even[j];
+        sum = even[i];
+    }
+}
+
+console.log(sum);
 
 
 
