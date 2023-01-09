@@ -116,6 +116,11 @@ if (digit > 0) {
     console.log('The sum of all the numbers before ' + digit + ' is - ' + result);
 }
 
+// Lesson 14. Homework. 
+
+// Task 1. 
+
+
 
 
 
