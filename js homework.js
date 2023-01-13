@@ -152,7 +152,78 @@ for (let i = 0; i < 1; i++) {
 
 console.log(sum);
 
+// Lesson 15. Homework. The (almost) infinite calculator with simple functions
 
+main()
+
+function main() {
+    
+    while (true) {
+        const expression = promptUser();
+
+        // Let's make sure that the calculator works in cases when a user enters math expression without white spaces
+        const operators = ["+" , "-", "*", "/"];
+        let split = expression.replace(new RegExp('\\' + operators.join('|\\'), 'g'), ' $& ');
+        split = split.split(" ");
+        split = split.filter(filterWhiteSpaces);
+
+        // Let's assign values
+        const firstDigit = parseInt(split[0]);
+        const secondDigit = parseInt(split[2]);
+        const operator = split[1];
+        let result = 0;
+
+        if (expression == "STOP") {
+            break;
+        } else if (Number.isInteger(secondDigit) != true || Number.isInteger(firstDigit != true)) {
+            message("You have to type a math expression");
+        } else if (operator == "+") {
+            result = add(firstDigit, secondDigit);
+            message(result);
+        } else if (operator == "-") {
+            result = subtract(firstDigit, secondDigit);
+            message(result);
+        } else if (operator == "*") {
+            result = multiply(firstDigit, secondDigit);
+            message(result);
+        } else if (operator == "/") {
+            result = divide(firstDigit, secondDigit);
+            message(result);
+        } else if (operator != "+" || operator != "-" || operator != "*" || operator != "/") {
+            message("Unknown operator");
+        }
+    }
+}
+
+function promptUser () {
+    const data = prompt("Enter math expression you want to count (type 'stop' if you want to leave the program): ").toUpperCase();
+    return data;
+}
+
+function filterWhiteSpaces (str) {
+    // returns an array with elements that != " "
+    return /\S/.test(str);
+}
+
+function add (a, b) {
+    return a + b;
+}
+
+function subtract (a, b) {
+    return a - b;
+}
+
+function multiply (a, b) {
+    return a * b;
+}
+
+function divide (a, b) {
+    return a / b;
+}
+
+function message (number) {
+    alert(number);
+}
 
 
 
