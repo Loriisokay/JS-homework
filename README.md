@@ -9,4 +9,4 @@ Just a file with the homework code.
 * How to make sure that a version of the calculator with and without white spaces inputs works well
 * Also practiced writing on GitHub
 
-![Happy avacado](https://unsplash.com/photos/8V4y-XXT3MQ) 
+![Happy avacado](https://unsplash.com/photos/8V4y-XXT3MQ)
