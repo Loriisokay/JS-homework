@@ -176,7 +176,7 @@ function main() {
         if (expression == "STOP") {
             break;
         } else if (Number.isInteger(secondDigit) != true || Number.isInteger(firstDigit != true)) {
-            message("You have to type a math expression");
+            message("You have to type math expression");
         } else if (operator == "+") {
             result = add(firstDigit, secondDigit);
             message(result);
@@ -223,6 +223,41 @@ function divide (a, b) {
 
 function message (number) {
     alert(number);
+}
+
+// Lesson 16.Homework.
+
+let sapsanStudent = {
+    name: "Saule",
+    surname: "Nazarbayeva",
+};
+
+sapsanStudent.name = "Akmaral";
+
+delete sapsanStudent.name;
+
+function isEmpty(obj) {
+        if(JSON.stringify(obj) == '{}') {
+            return true;
+        } else {
+            return false;
+        }
+}
+
+isEmpty(sapsanStudent);
+
+const myFamily = {
+    me: {
+        firstName: "Larissa",
+        lastName: "Lee",
+        hobby: "reading"
+    },
+    pet: {
+        species: "cat",
+        breed: "persian",
+        color: "ginger",
+        hobby: "sleeping"
+    }
 }
 
 
