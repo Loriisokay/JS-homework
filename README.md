@@ -13,4 +13,8 @@ Just a file with the homework code.
 
 * How to work with objects
 
+### Lesson 17 update. 
+
+* How to manipulate DOM
+
 ![Happy avacado](https://images.unsplash.com/photo-1554825203-68321ddde262?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=785&q=80)

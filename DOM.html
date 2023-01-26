@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text">
+        Hooraaay!
+    </div>
+    <button type="button" id="button1" onclick="deleteText()">Click Here if you want to delete text</button>
+    <button type="button" id="button2" onclick="hideButton()">Click me and I'll disappear</button>
+    <form action="#">
+        <input type="text" id="greeting" placeholder="Hello!">
+        <input type="submit" id="greeting-button" value="Click me and the text will change" onclick="changePlaceholder()">
+        <input type="text" id="exponentiation" placeholder="Enter a number">
+        <input type="submit" value="Click me to get the exponentiation" onclick="getExponentiation()">
+        <input type="text" id="this" placeholder="I'm here">
+        <input type="text" id="that" placeholder="Empty">
+        <input type="submit" id="swap" value="Click me and I'll swap places" onclick="swapPlaces()">
+    </form>
+    <script>
+
+        function deleteText() {
+            const text = document.getElementById("text");
+            text.innerText = ""
+        }
+
+        function hideButton() {
+            const buttonDisappear = document.getElementById("button2");
+            buttonDisappear.style.display = "none";
+        }
+
+        function changePlaceholder() {
+            const placeholder = document.getElementById("greeting");
+            placeholder.placeholder = "Bye!";
+        }
+
+        function getExponentiation() {
+            const exponentiation = document.querySelector("#exponentiation").value;
+            alert(exponentiation ** exponentiation);
+        }
+
+        function swapPlaces() {
+            document.querySelector("#that").value = document.querySelector("#this").value;
+            document.getElementById("this").value = "";
+        }
+
+    </script>
+</body>
+</html>
